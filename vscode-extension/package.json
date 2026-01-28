@@ -1,0 +1,40 @@
+{
+  "name": "autolab-vscode",
+  "displayName": "Autolab App",
+  "description": "Run the Autolab homework automator inside VS Code.",
+  "version": "0.0.1",
+  "publisher": "suresh-dj",
+  "author": "Suresh DJ",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished",
+    "onCommand:autolab-vscode.openApp"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "autolab-vscode.openApp",
+        "title": "Open Autolab App"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "prepare": "npm run compile"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "@types/vscode": "^1.80.0",
+    "typescript": "^5.8.2"
+  }
+}
+
